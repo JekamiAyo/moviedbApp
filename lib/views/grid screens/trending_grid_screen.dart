@@ -39,7 +39,7 @@ class TrendingGridScreen extends StatelessWidget {
           ),
         ),
         title: Text(
-          "Now Playing",
+          "Trending",
           style: GoogleFonts.roboto(
             color: Colors.white,
             fontSize: 25,
@@ -69,7 +69,8 @@ class TrendingGridScreen extends StatelessWidget {
                   Flexible(
                     child: Container(
                       width: 140,
-                      margin: const EdgeInsets.only(right: 7),
+                      height: 200,
+                      // margin: const EdgeInsets.only(right: 7),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(color: Colors.white),
@@ -78,8 +79,9 @@ class TrendingGridScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(12),
                         child: CachedNetworkImage(
                           imageUrl:
-                              'https://image.tmdb.org/t/p/w500${nowPlayingResults![index].posterPath}',
+                              'https://image.tmdb.org/t/p/w500${nowPlayingResults![index].posterPath ?? nowPlayingResults![index].backdropPath}',
                           fit: BoxFit.cover,
+                          
                         ),
                       ),
                     ),

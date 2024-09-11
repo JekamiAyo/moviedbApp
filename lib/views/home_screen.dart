@@ -59,12 +59,15 @@ class HomePage extends ConsumerWidget {
                               CarouselSlider.builder(
                                 itemCount: nowPlayingResults!.length,
                                 unlimitedMode: true,
+                                autoSliderTransitionTime:
+                                    const Duration(seconds: 2),
+                                autoSliderDelay: const Duration(seconds: 4),
                                 enableAutoSlider: true,
                                 slideBuilder: (index) {
                                   movieIndex = index;
                                   return CachedNetworkImage(
                                     imageUrl:
-                                        'https://image.tmdb.org/t/p/w500${nowPlayingResults[index].posterPath}',
+                                        'https://image.tmdb.org/t/p/w500${nowPlayingResults[index].posterPath ?? nowPlayingResults[index].backdropPath}',
                                     fit: BoxFit.cover,
                                   );
                                 },
@@ -323,7 +326,8 @@ class HomePage extends ConsumerWidget {
                                     onPressed: () {
                                       Get.to(
                                         () => PopularSeriesGridScreen(
-                                          nowPlayingResults: popularSeriesResults,
+                                          nowPlayingResults:
+                                              popularSeriesResults,
                                         ),
                                       );
                                     },

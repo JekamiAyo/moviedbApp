@@ -6,7 +6,6 @@ import 'package:google_fonts/google_fonts.dart';
 
 import '../../model/popular_series.dart';
 
-
 class PopularSeriesGridScreen extends StatelessWidget {
   final List<Results>? nowPlayingResults;
   const PopularSeriesGridScreen({super.key, this.nowPlayingResults});
@@ -41,7 +40,7 @@ class PopularSeriesGridScreen extends StatelessWidget {
           ),
         ),
         title: Text(
-          "Now Playing",
+          "Popular Series",
           style: GoogleFonts.roboto(
             color: Colors.white,
             fontSize: 25,
@@ -71,7 +70,8 @@ class PopularSeriesGridScreen extends StatelessWidget {
                   Flexible(
                     child: Container(
                       width: 140,
-                      margin: const EdgeInsets.only(right: 7),
+                      height: 200,
+                      //margin: const EdgeInsets.only(right: 7),
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(12),
                         border: Border.all(color: Colors.white),
@@ -80,8 +80,11 @@ class PopularSeriesGridScreen extends StatelessWidget {
                         borderRadius: BorderRadius.circular(12),
                         child: CachedNetworkImage(
                           imageUrl:
-                              'https://image.tmdb.org/t/p/w500${nowPlayingResults![index].posterPath}',
+                              'https://image.tmdb.org/t/p/w500${nowPlayingResults![index].posterPath ?? nowPlayingResults![index].backdropPath}',
                           fit: BoxFit.cover,
+                          placeholder: (context, url) => Container(
+                            color: Colors.white,
+                          ),
                         ),
                       ),
                     ),
