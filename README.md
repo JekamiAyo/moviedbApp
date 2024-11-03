@@ -1,16 +1,13 @@
-# flutter_movie_app
+# flutter movie app
 
-A new Flutter project.
+A simple flutter app that provides insights on movies. Using TMDB api for data
 
-## Getting Started
+## Deliverables
 
-This project is a starting point for a Flutter application.
+<img src="https://github.com/user-attachments/assets/3e1a0773-dca3-4339-b1b7-ea3efd198a03" alt="Simulator Screenshot - iPhone 15 Pro - 2024-11-03 at 20 01 52" width="220" height="500">
+<img src="https://github.com/user-attachments/assets/f014e876-72ee-430d-8bb9-98e3d08ec411" alt="Simulator Screenshot - iPhone 15 Pro - 2024-11-03 at 20 02 44" width="220" height="500">
+<img src="https://github.com/user-attachments/assets/3664717f-0fa8-444e-bbed-8ae219c712af" alt="Simulator Screenshot - iPhone 15 Pro - 2024-11-03 at 20 01 58" width="220" height="500">
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+https://github.com/user-attachments/assets/31f31ef7-d369-4199-821c-df9c5819bf77
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
